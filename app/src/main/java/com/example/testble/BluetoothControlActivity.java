@@ -2,16 +2,11 @@ package com.example.testble;
 
 
 import android.app.Activity;
-import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
-import android.content.ServiceConnection;
 import android.graphics.Color;
-import android.hardware.Sensor;
-import android.hardware.SensorEvent;
 import android.os.Bundle;
 import android.os.Handler;
-import android.os.IBinder;
 import android.os.Message;
 import android.text.Spannable;
 import android.text.SpannableStringBuilder;
@@ -26,7 +21,6 @@ import android.widget.TextView;
 
 import org.puredata.android.io.AudioParameters;
 import org.puredata.android.io.PdAudio;
-import org.puredata.android.service.PdService;
 import org.puredata.android.utils.PdUiDispatcher;
 import org.puredata.core.PdBase;
 import org.puredata.core.PdReceiver;
@@ -126,8 +120,8 @@ public class BluetoothControlActivity extends Activity {
         mDeviceAddress = intent.getStringExtra(EXTRAS_DEVICE_ADDRESS);
 
         A2Input = (TextView) findViewById(R.id.A2Input);
-        Peak = (TextView) findViewById(R.id.Peak);
-        Trough = (TextView) findViewById(R.id.Trough);
+        Peak = (TextView) findViewById(R.id.peak);
+        Trough = (TextView) findViewById(R.id.trough);
 
         Switch onOffSwitch = (Switch) findViewById(R.id.onOffSwitch);
 
@@ -229,7 +223,7 @@ public class BluetoothControlActivity extends Activity {
 
         try {
             initPD();
-            loadPDPatch("synth.pd"); // This is the name of the patch in the zip
+            loadPDPatch("synth/synth.pd"); // This is the name of the patch in the zip
 
             new Handler().post(new Runnable() {
                 @Override
@@ -395,6 +389,11 @@ public class BluetoothControlActivity extends Activity {
             if(source.equals("peak"))
             {
                 Peak.setText(Float.toString(x));
+            }
+
+            else if(source.equals("trough"))
+            {
+                Trough.setText(Float.toString(x));
             }
         }
 
