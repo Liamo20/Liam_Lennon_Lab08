@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "/Users/student/Desktop/Liam_Lennon_Lab08/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_launcher.png",
+        "source": "/Users/student/Desktop/Liam_Lennon_Lab08/app/src/main/res/drawable-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/student/Desktop/Liam_Lennon_Lab08/app/build/intermediates/res/merged/debug/drawable-hdpi/icon.png",
+        "source": "/Users/student/Desktop/Liam_Lennon_Lab08/app/src/main/res/drawable-hdpi/icon.png"
+    },
+    {
+        "merged": "/Users/student/Desktop/Liam_Lennon_Lab08/app/build/intermediates/res/merged/debug/drawable-hdpi/hongjia.png",
+        "source": "/Users/student/Desktop/Liam_Lennon_Lab08/app/src/main/res/drawable-hdpi/hongjia.png"
+    }
+]
